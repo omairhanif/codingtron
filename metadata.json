@@ -1,0 +1,6 @@
+{
+  "name": "Codingtron - Cloud, DevOps & Automation Solutions",
+  "description": "Pixel-accurate recreation of Codingtron: enterprise-grade cloud migration, infrastructure management, DevOps CI/CD pipelines, high availability architecture, and automation services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
