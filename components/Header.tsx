@@ -32,7 +32,15 @@ const serviceGroups = [
   services: SERVICES.filter((service) => group.ids.includes(service.id)),
 }));
 
-type DropdownName = 'services' | 'case-studies' | null;
+type DropdownName = 'services' | 'technologies' | 'case-studies' | null;
+
+const technologyLinks = [
+  ['Cloud platforms', '/services/cloud-migration-multi-cloud-strategy'],
+  ['Containers & Kubernetes', '/services/infrastructure-deployment-management'],
+  ['Infrastructure as Code', '/services/infrastructure-deployment-management'],
+  ['CI/CD & automation', '/services/devops-ci-cd-pipeline-solutions'],
+  ['Monitoring & reliability', '/services/monitoring-reporting-solutions'],
+] as const;
 
 export default function Header() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -88,21 +96,18 @@ export default function Header() {
 
   return (
     <>
-      <header className={`sticky top-0 z-50 border-b border-black bg-white transition-[padding] duration-300 ${isCompact ? 'py-2.5' : 'py-4'}`}>
+      <header className={`site-header sticky top-0 z-50 bg-white transition-[padding] duration-300 ${isCompact ? 'py-2.5' : 'py-4'}`}>
         <div
           ref={headerRef}
           onMouseLeave={() => setActiveDropdown(null)}
-          className="header-inner relative mx-auto flex max-w-7xl items-center justify-between gap-2 px-2 sm:gap-5 sm:px-8 lg:px-12"
+          className="header-inner relative mx-auto flex max-w-6xl items-center justify-between gap-2 px-2 sm:gap-5 sm:px-8 lg:px-12"
         >
           <Link href="/" className="header-brand shrink-0" aria-label="Codingtron home">
             <span className="header-brand-mark" aria-hidden="true">C</span>
             <span>CODINGTRON</span>
           </Link>
 
-          <nav className="header-desktop-nav hidden items-center gap-1 md:flex lg:gap-3 xl:gap-6" aria-label="Main navigation">
-            <Link href="/" aria-current={pathname === '/' ? 'page' : undefined} className="header-nav-link">Home</Link>
-            <Link href="/about" aria-current={pathname === '/about' ? 'page' : undefined} className="header-nav-link">About Us</Link>
-            <Link href="/products" aria-current={pathname === '/products' ? 'page' : undefined} className="header-nav-link">Products</Link>
+          <nav className="header-desktop-nav hidden items-center gap-1 lg:flex xl:gap-3" aria-label="Main navigation">
             <button
               type="button"
               className="header-nav-trigger"
@@ -116,6 +121,15 @@ export default function Header() {
             <button
               type="button"
               className="header-nav-trigger"
+              aria-expanded={activeDropdown === 'technologies'}
+              aria-controls="technologies-dropdown"
+              onClick={() => toggleDropdown('technologies')}
+            >
+              Technologies <ChevronDown aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              className="header-nav-trigger"
               aria-expanded={activeDropdown === 'case-studies'}
               aria-current={pathname.startsWith('/case-studies') ? 'page' : undefined}
               aria-controls="case-studies-dropdown"
@@ -123,6 +137,8 @@ export default function Header() {
             >
               Case Studies <ChevronDown aria-hidden="true" />
             </button>
+            <Link href="/about" aria-current={pathname === '/about' ? 'page' : undefined} className="header-nav-link">About</Link>
+            <Link href="/blog" aria-current={pathname.startsWith('/blog') ? 'page' : undefined} className="header-nav-link">Insights</Link>
           </nav>
 
           <div className="flex shrink-0 items-center gap-2 sm:gap-3">
@@ -133,7 +149,7 @@ export default function Header() {
               aria-expanded={isMenuOpen}
               aria-controls="mobile-navigation"
               aria-label={isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-              className="header-menu-toggle flex md:hidden"
+              className="header-menu-toggle flex lg:hidden"
             >
               {isMenuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
             </button>
@@ -191,16 +207,37 @@ export default function Header() {
               </>
             )}
           </div>
+
+          <div
+            id="technologies-dropdown"
+            aria-hidden={activeDropdown !== 'technologies'}
+            inert={activeDropdown !== 'technologies'}
+            className={`header-dropdown header-dropdown-technologies ${activeDropdown === 'technologies' ? 'is-open' : ''}`}
+          >
+            {activeDropdown === 'technologies' && (
+              <>
+                <div className="header-dropdown-heading">
+                  <div><span className="header-dropdown-kicker">OUR EXPERTISE</span><h2>Tools chosen for the work.</h2></div>
+                  <Link href="/#technologies" onClick={() => setActiveDropdown(null)} className="header-dropdown-all">Explore expertise <ArrowUpRight aria-hidden="true" /></Link>
+                </div>
+                <div className="technology-dropdown-list">
+                  {technologyLinks.map(([label, href]) => <Link key={label} href={href} onClick={() => setActiveDropdown(null)} className="header-dropdown-item"><span>{label}</span><ArrowUpRight aria-hidden="true" /></Link>)}
+                </div>
+              </>
+            )}
+          </div>
         </div>
       </header>
 
       <div className={`mobile-navigation-layer lg:hidden ${isMenuOpen ? 'is-open' : ''}`} aria-hidden={!isMenuOpen} inert={!isMenuOpen}>
         <button type="button" aria-label="Close navigation menu" onClick={closeMenu} className="mobile-navigation-backdrop" />
         <nav id="mobile-navigation" aria-label="Mobile navigation" className="mobile-navigation-panel">
+          <div className="mobile-navigation-heading">
+            <Link href="/" onClick={closeMenu} className="header-brand" aria-label="Codingtron home"><span className="header-brand-mark" aria-hidden="true">C</span><span>CODINGTRON</span></Link>
+            <button type="button" onClick={closeMenu} className="mobile-navigation-close" aria-label="Close navigation menu"><X aria-hidden="true" /></button>
+          </div>
           <span className="header-dropdown-kicker">NAVIGATION</span>
           <Link href="/" onClick={closeMenu} aria-current={pathname === '/' ? 'page' : undefined} className="mobile-nav-link">Home <ArrowUpRight aria-hidden="true" /></Link>
-          <Link href="/about" onClick={closeMenu} aria-current={pathname === '/about' ? 'page' : undefined} className="mobile-nav-link">About Us <ArrowUpRight aria-hidden="true" /></Link>
-          <Link href="/products" onClick={closeMenu} aria-current={pathname === '/products' ? 'page' : undefined} className="mobile-nav-link">Products <ArrowUpRight aria-hidden="true" /></Link>
 
           <section className="mobile-nav-section">
             <button type="button" onClick={() => toggleMobileDisclosure('services')} aria-expanded={activeMobileDisclosure === 'services'} aria-current={pathname.startsWith('/services') ? 'page' : undefined} aria-controls="mobile-services-list" className="mobile-nav-disclosure">
@@ -220,6 +257,18 @@ export default function Header() {
           </section>
 
           <section className="mobile-nav-section">
+            <button type="button" onClick={() => toggleMobileDisclosure('technologies')} aria-expanded={activeMobileDisclosure === 'technologies'} aria-controls="mobile-technologies-list" className="mobile-nav-disclosure">
+              Technologies <ChevronDown aria-hidden="true" />
+            </button>
+            <div id="mobile-technologies-list" className={`mobile-disclosure-content ${activeMobileDisclosure === 'technologies' ? 'is-open' : ''}`} inert={activeMobileDisclosure !== 'technologies'}>
+              <div className="mobile-service-links">
+                {technologyLinks.map(([label, href]) => <Link key={label} href={href} onClick={closeMenu}>{label}</Link>)}
+              </div>
+              <Link href="/#technologies" onClick={closeMenu} className="mobile-view-all">Explore expertise <ArrowUpRight aria-hidden="true" /></Link>
+            </div>
+          </section>
+
+          <section className="mobile-nav-section">
             <button type="button" onClick={() => toggleMobileDisclosure('case-studies')} aria-expanded={activeMobileDisclosure === 'case-studies'} aria-current={pathname.startsWith('/case-studies') ? 'page' : undefined} aria-controls="mobile-case-studies-list" className="mobile-nav-disclosure">
               Case Studies <ChevronDown aria-hidden="true" />
             </button>
@@ -232,6 +281,9 @@ export default function Header() {
               <Link href="/case-studies" onClick={closeMenu} className="mobile-view-all">All case studies <ArrowUpRight aria-hidden="true" /></Link>
             </div>
           </section>
+          <Link href="/about" onClick={closeMenu} aria-current={pathname === '/about' ? 'page' : undefined} className="mobile-nav-link">About <ArrowUpRight aria-hidden="true" /></Link>
+          <Link href="/blog" onClick={closeMenu} aria-current={pathname.startsWith('/blog') ? 'page' : undefined} className="mobile-nav-link">Insights <ArrowUpRight aria-hidden="true" /></Link>
+          <Link href="/contact" onClick={closeMenu} className="button button-dark mobile-navigation-cta">Let&apos;s talk <ArrowUpRight aria-hidden="true" /></Link>
         </nav>
       </div>
     </>

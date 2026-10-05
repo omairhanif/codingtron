@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
-import { Mulish } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-const mulish = Mulish({
+const siteFont = Inter({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-mulish',
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-body',
   display: 'swap',
 });
 
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${mulish.variable} scroll-smooth`}>
+    <html lang="en" className={`${siteFont.variable} scroll-smooth`}>
       <body className="flex min-h-screen flex-col bg-white font-sans text-black antialiased selection:bg-black selection:text-white" suppressHydrationWarning>
         <Header />
         <main className="flex-1 w-full">{children}</main>
