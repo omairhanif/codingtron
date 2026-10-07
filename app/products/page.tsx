@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function ProductsPage() {
 	return (
 		<section className="border-b border-black bg-white py-12 md:py-16">
-			<div className="mx-auto grid max-w-5xl items-center gap-8 px-5 sm:px-8 md:grid-cols-2 md:gap-10 lg:px-12">
+			<div className="mx-auto grid max-w-[68rem] items-center gap-8 px-4 sm:px-6 md:grid-cols-2 md:gap-10 lg:px-8">
 				<div>
 					<p className="eyebrow">CODINGTRON / PRODUCTS</p>
 					<h1 className="mt-4 max-w-[12ch] text-3xl font-semibold leading-tight sm:text-4xl">

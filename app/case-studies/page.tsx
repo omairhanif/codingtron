@@ -14,7 +14,7 @@ export default function CaseStudiesPage() {
     <div className="bg-white text-inherit min-h-screen">
       {/* Header Banner */}
       <section className="relative py-20 md:py-24 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[19px] capitalize text-inherit font-bold">
             Passionate – Dedicated – Professional
           </p>
@@ -32,7 +32,7 @@ export default function CaseStudiesPage() {
 
       {/* Case Studies Grid */}
       <section className="py-20 md:py-28 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-12">
             {CASE_STUDIES.map((study) => (
               <div
@@ -114,7 +114,7 @@ export default function CaseStudiesPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white text-center">
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="max-w-[68rem] mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-black text-white">Want to achieve similar results?</h2>
           <p className="mt-3 text-sm sm:text-base text-white">
             Let our certified engineers perform a technical audit of your environment and design a customized roadmap.

@@ -48,7 +48,7 @@ export default function AboutPage() {
     <div className="bg-white text-inherit min-h-screen">
       {/* Hero Header Banner */}
       <section className="relative py-20 md:py-24 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[19px] capitalize text-inherit font-bold">
             Passionate – Dedicated – Professional
           </p>
@@ -66,7 +66,7 @@ export default function AboutPage() {
 
       {/* Main Narrative & Image Section */}
       <section className="py-20 md:py-28 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <figure className="relative mx-auto max-w-5xl">
             <div className="relative overflow-hidden rounded-br-[50px] rounded-tl-2xl border-4 border-white bg-white shadow-2xl">
               <Image
@@ -120,7 +120,7 @@ export default function AboutPage() {
 
       {/* Core Ethos: Passionate - Dedicated - Professional */}
       <section className="py-20 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-[19px] capitalize text-inherit font-bold">Our Core Ethos</p>
             <div className="w-48 border-t border-dotted border-black mx-auto my-3" />
@@ -153,7 +153,7 @@ export default function AboutPage() {
 
       {/* Stats Section */}
       <section className="py-20 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {COMPANY_STATS.map((stat) => (
               <div
@@ -173,7 +173,7 @@ export default function AboutPage() {
 
       {/* CTA Section matching codingtron dark navy theme */}
       <section className="py-20 bg-black text-white text-center">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-[68rem] mx-auto px-4">
           <p className="text-xs font-bold uppercase tracking-widest text-inherit">
             Work with Certified Architects
           </p>

@@ -16,7 +16,7 @@ function ContactSection() {
 
   return (
     <section id="contact" className="bg-black py-20 text-white md:py-28">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[68rem] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-[19px] font-bold text-inherit">Passionate - Dedicated - Professional</p>
           <h2 className="mt-3 text-3xl font-black sm:text-5xl">Send your query or request a callback</h2>
@@ -48,7 +48,7 @@ export default function ContactPage() {
     <div className="bg-white text-inherit min-h-screen">
       {/* Header Banner */}
       <section className="relative py-20 md:py-24 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[19px] capitalize text-inherit font-bold">
             Passionate – Dedicated – Professional
           </p>
@@ -69,7 +69,7 @@ export default function ContactPage() {
 
       {/* Operational Guarantee Bar */}
       <section className="py-14 bg-white border-t border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
             <div className="p-5 rounded-2xl bg-white border border-black flex items-center gap-4 shadow-sm">
               <div className="w-12 h-12 rounded-xl bg-white text-inherit flex items-center justify-center shrink-0 border border-black">

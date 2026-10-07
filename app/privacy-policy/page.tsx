@@ -10,7 +10,7 @@ export const metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <div className="bg-white text-inherit min-h-screen py-16">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
         <div className="text-xs text-inherit flex items-center gap-2 mb-8">
           <Link href="/" className="hover:text-inherit transition-colors">

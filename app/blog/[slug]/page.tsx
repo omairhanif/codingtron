@@ -53,7 +53,7 @@ export default async function BlogPostDetailPage({ params }: BlogPostDetailPageP
     <div className="bg-white text-inherit min-h-screen">
       {/* Breadcrumb */}
       <div className="bg-white border-b border-black">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-inherit flex items-center gap-2">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-inherit flex items-center gap-2">
           <Link href="/" className="hover:text-inherit transition-colors">
             Home
           </Link>
@@ -68,7 +68,7 @@ export default async function BlogPostDetailPage({ params }: BlogPostDetailPageP
 
       {/* Article Header */}
       <header className="py-16 md:py-20 border-b border-black bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-3 text-xs text-inherit mb-4">
             <span className="px-3 py-1 rounded-full bg-white border border-black text-inherit font-bold uppercase tracking-wider text-[11px]">
               {post.category}
@@ -111,7 +111,7 @@ export default async function BlogPostDetailPage({ params }: BlogPostDetailPageP
 
       {/* Article Body */}
       <main className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-6 text-inherit text-sm sm:text-base leading-relaxed">
             {post.content.split('\n\n').map((paragraph, idx) => {
               if (paragraph.startsWith('###')) {

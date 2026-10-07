@@ -52,7 +52,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
     <div className="bg-white text-inherit min-h-screen">
       {/* Breadcrumbs */}
       <div className="bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-inherit flex items-center gap-2">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-inherit flex items-center gap-2">
           <Link href="/" className="hover:text-inherit transition-colors">
             Home
           </Link>
@@ -67,7 +67,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
 
       {/* Hero Header */}
       <section className="py-16 md:py-24 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-black text-inherit text-xs font-bold uppercase tracking-wider mb-4">
               <span>{study.clientIndustry}</span>
@@ -88,7 +88,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
 
       {/* Main Breakdown */}
       <section className="py-16 md:py-20 border-b border-black bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Story Details */}
             <div className="lg:col-span-8 space-y-10">
@@ -185,7 +185,7 @@ export default async function CaseStudyDetailPage({ params }: CaseStudyDetailPag
 
       {/* CTA Footer */}
       <section className="py-20 bg-black text-white text-center">
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="max-w-[68rem] mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-black text-white">Ready for a similar transformation?</h2>
           <p className="mt-3 text-sm sm:text-base text-white">
             Let our senior architects design an enterprise solution that delivers measurable ROI.

@@ -47,7 +47,7 @@ export default function ServicesPage() {
     <div className="bg-white text-inherit min-h-screen">
       {/* Header Banner */}
       <section className="relative py-20 md:py-24 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[19px] capitalize text-inherit font-bold">
             Passionate – Dedicated – Professional
           </p>
@@ -65,7 +65,7 @@ export default function ServicesPage() {
 
       {/* Services Detailed List */}
       <section className="py-20 md:py-28 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service) => {
               const bgImg = service.image || SERVICE_IMAGES[service.slug] || 'https://codingtron.com/media/cloud-migration.jpg';
@@ -130,7 +130,7 @@ export default function ServicesPage() {
 
       {/* Methodology Section */}
       <section className="py-20 md:py-24 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <p className="text-[19px] capitalize text-inherit font-bold">Delivery Process</p>
             <div className="w-48 border-t border-dotted border-black mx-auto my-3" />
@@ -159,7 +159,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="py-20 bg-black text-white text-center">
-        <div className="max-w-3xl mx-auto px-4">
+        <div className="max-w-[68rem] mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-black text-white">Need a specialized multi-cloud solution?</h2>
           <p className="mt-3 text-sm sm:text-base text-white">
             Our certified cloud architects are ready to review your infrastructure and deliver a tailored roadmap.

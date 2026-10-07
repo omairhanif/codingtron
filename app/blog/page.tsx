@@ -18,7 +18,7 @@ export default function BlogListingPage() {
     <div className="bg-white text-inherit min-h-screen">
       {/* Hero Banner */}
       <section className="relative py-20 md:py-24 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-[19px] capitalize text-inherit font-bold">
             Passionate – Dedicated – Professional
           </p>
@@ -36,7 +36,7 @@ export default function BlogListingPage() {
 
       {/* Featured Article */}
       <section className="py-16 md:py-20 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-3xl bg-white border border-black p-8 sm:p-12 hover:border-black transition-all shadow-md hover:shadow-xl flex flex-col lg:flex-row gap-8 items-center group">
             <div className="lg:w-7/12 space-y-4">
               <div className="flex items-center gap-3 text-xs text-inherit">
@@ -101,7 +101,7 @@ export default function BlogListingPage() {
 
       {/* Grid of Other Articles */}
       <section className="py-20 bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {others.map((post) => (
               <article

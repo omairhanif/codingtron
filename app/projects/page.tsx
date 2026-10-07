@@ -6,7 +6,7 @@ import { CASE_STUDIES } from '@/lib/data';
 
 function CloudProviders() {
   const providers = [['Amazon Web Services', 'aws.jpg'], ['Microsoft Azure', 'azure.jpg'], ['VMware Cloud', 'vmware.jpg'], ['DigitalOcean', 'digitalocean.jpg'], ['Oracle Cloud', 'oracle.jpg'], ['Google Cloud Platform', 'gcp.jpg']];
-  return <section className="bg-white py-12"><div className="mx-auto grid max-w-6xl grid-cols-2 items-center justify-items-center gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:grid-cols-6 lg:px-8">{providers.map(([name, image]) => <div key={name} className="relative h-20 w-36"><Image src={`https://codingtron.com/media/${image}`} alt={`Codingtron - ${name}`} fill className="rounded-lg object-contain" sizes="160px" referrerPolicy="no-referrer" /></div>)}</div></section>;
+  return <section className="bg-white py-12"><div className="mx-auto grid max-w-[68rem] grid-cols-2 items-center justify-items-center gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:grid-cols-6 lg:px-8">{providers.map(([name, image]) => <div key={name} className="relative h-20 w-36"><Image src={`https://codingtron.com/media/${image}`} alt={`Codingtron - ${name}`} fill className="rounded-lg object-contain" sizes="160px" referrerPolicy="no-referrer" /></div>)}</div></section>;
 }
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default function OurProjectsPage() {
     <div className="bg-white text-inherit min-h-screen">
       {/* Breadcrumb */}
       <div className="bg-white border-b border-black">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-inherit flex items-center gap-2">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8 py-3 text-xs text-inherit flex items-center gap-2">
           <Link href="/" className="hover:text-inherit transition-colors">
             Home
           </Link>
@@ -31,7 +31,7 @@ export default function OurProjectsPage() {
 
       {/* Header */}
       <section className="relative py-20 md:py-24 bg-white border-b border-black text-center">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-[19px] capitalize text-inherit font-bold">
             Passionate – Dedicated – Professional
           </p>
@@ -49,7 +49,7 @@ export default function OurProjectsPage() {
 
       {/* Projects Grid */}
       <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[68rem] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {CASE_STUDIES.map((project) => (
               <div

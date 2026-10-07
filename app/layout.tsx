@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
@@ -45,12 +46,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={`${siteFont.variable} scroll-smooth`}>
       <body className="flex min-h-screen flex-col bg-white font-sans text-black antialiased selection:bg-black selection:text-white" suppressHydrationWarning>
         <Header />
-        <main className="flex-1 w-full">{children}</main>
+        <main className="w-full flex-1">{children}</main>
         <Footer />
       </body>
     </html>
