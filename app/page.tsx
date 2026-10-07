@@ -212,7 +212,6 @@ function StatsSection() {
 function PlatformStrip() {
   return (
     <div className="stats-platform-strip" role="region" aria-label="Technologies Codingtron works with">
-      <p className="eyebrow">TOOLS WE KNOW</p>
       <div className="platform-marquee">
         <div className="platform-logos">
           {[0, 1].map((copy) => (
